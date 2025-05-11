@@ -7,9 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
-      --secondary-gradient: linear-gradient(135deg, #8b5cf6, #d946ef);
-      --accent-gradient: linear-gradient(135deg, #d946ef, #ec4899);
+      --primary-gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+      --secondary-gradient: linear-gradient(135deg, #7c3aed, #c026d3);
+      --accent-gradient: linear-gradient(135deg, #c026d3, #db2777);
       --text-color: #1f2937;
       --light-bg: #f8fafc;
     }
@@ -36,6 +36,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     header::before {
@@ -130,6 +131,9 @@
       border-radius: 16px;
       box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.1), 0 2px 4px -1px rgba(99, 102, 241, 0.06);
       border: 1px solid rgba(99, 102, 241, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     form label {
@@ -137,10 +141,12 @@
       color: var(--text-color);
       display: block;
       margin-bottom: 0.5em;
+      width: 100%;
+      text-align: center;
     }
 
     form input {
-      width: 100%;
+      width: 60%;
       padding: 1em;
       margin-bottom: 1.5em;
       border: 2px solid rgba(99, 102, 241, 0.2);
@@ -156,7 +162,7 @@
     }
 
     form button {
-      width: 100%;
+      width: 60%;
       padding: 1em;
       background: var(--primary-gradient);
       color: white;
@@ -197,14 +203,17 @@
     @media (max-width: 768px) {
       header {
         padding: 6em 1.5em;
+        background: linear-gradient(135deg, #4338ca, #6d28d9);
       }
       
       header h1 {
         font-size: 2.4em;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       }
       
       header p {
         font-size: 1.1em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
       }
       
       section {
@@ -294,6 +303,7 @@
       gap: 2em;
       justify-content: center;
       margin-top: 2em;
+      width: 100%;
     }
     .service-card {
       background: white;
@@ -306,8 +316,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
       transition: transform 0.2s;
       border: 1px solid #ede9fe;
+      margin: 0 auto;
     }
     .service-card:hover {
       transform: translateY(-6px) scale(1.03);
@@ -321,6 +333,12 @@
       .service-cards {
         flex-direction: column;
         gap: 1.5em;
+        align-items: center;
+        padding: 0 1em;
+      }
+      .service-card {
+        width: 100%;
+        max-width: 100%;
       }
     }
     .service-title {
@@ -432,7 +450,7 @@
   </section>
 
   <section>
-    <h2 style="text-align:center">רוצה להתייעץ? אשמח לשמוע ממך</h2>
+    <h2 style="text-align:center">לפגישת ייעוץ ראשונית - ללא עלות!</h2>
     <form action="https://formsubmit.co/a05a493572f85d40bf1d29ab6803a7f1" method="POST">
       <label for="name">שם:</label>
       <input type="text" name="name" id="name" placeholder="שם מלא" required>
